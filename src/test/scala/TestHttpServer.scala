@@ -34,8 +34,8 @@ class TestHttpServer extends FlatSpec with Matchers with MockitoSugar {
 
 		val body = new String(data, 0, number, "ASCII");
 
-		number should be(121)
-		body should be("<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n\t<meta charset=\"UTF-8\">\n\t<title>Title</title>\n</head>\n<body>\n\thi.\n</body>\n</html>")
+		number should be(139)
+		body should be("HTTP/1.1 200 OK \n\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n\t<meta charset=\"UTF-8\">\n\t<title>Title</title>\n</head>\n<body>\n\thi.\n</body>\n</html>")
 
 	}
 

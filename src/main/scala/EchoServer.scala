@@ -76,8 +76,8 @@ class HttpServer(val path: String) {
 
 		var bytes: Array[Byte] = null
 		try {
-			request.print("HTTP/1.1 200 OK \r\n")
-			request.print("\r\n")
+			request.print("HTTP/1.1 200 OK \n")
+			//request.print("\r\n")
 			bytes = Files.readAllBytes(Paths.get(requestPath))
 		} catch {
 			case ex: Exception => {
